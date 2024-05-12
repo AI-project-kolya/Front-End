@@ -1,0 +1,16 @@
+form {
+  width: 40%;
+  min-width: 350px;
+  margin: 50px auto;
+  background-color: rgba(190, 197, 238, 0.616);
+  padding: 15px;
+  border-radius: var(--bs-border-radius);
+  overflow: hidden;
+}
+form .form-check-label {
+  margin-left: 20px;
+}
+form .form-switch {
+  text-align: left;
+  margin-left: 15px;
+}/*# sourceMappingURL=form.css.map */

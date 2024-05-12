@@ -1,0 +1,9 @@
+button {
+  margin: 5px;
+}
+button svg.next {
+  margin-left: 5px;
+}
+button svg.back {
+  margin-right: 5px;
+}/*# sourceMappingURL=btns.css.map */

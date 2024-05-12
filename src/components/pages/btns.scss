@@ -1,0 +1,12 @@
+button {
+    margin: 5px;
+    svg {
+        &.next {
+            margin-left: 5px;
+        }
+
+        &.back {
+            margin-right: 5px;
+        }
+    }
+}
