@@ -11,7 +11,7 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
             const myHeaders = new Headers();
             myHeaders.append('Accept', 'application/json');
             myHeaders.append('Content-Type', 'application/json');
-            const response = await fetch("http://127.0.0.1:8000/api/predict_price_range", {
+            const response = await fetch("https://mragaey.com/marwa/api/predict_price_range", {
                 method: 'POST',
                 headers: myHeaders,
                 body: JSON.stringify(data)
