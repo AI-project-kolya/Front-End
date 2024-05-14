@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./Form.css"
 import Prediction from './Prediction';
+import { toast } from 'react-toastify';
 function Submit({ data, setData, setBack, setPrediction, prediction }) {
     const [loading, setLoading] = useState(0);
     const handleClick = async (e) => {
@@ -16,17 +17,17 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
                 headers: myHeaders,
                 body: JSON.stringify(data)
             });
-            if (!response.ok) {
-                throw new Error(response);
-            }
             const responseText = await response.json();
+            if (!response.ok) {
+                throw new Error(responseText );
+            }
             console.log('Price Range Prediction:', responseText);
             setPrediction(responseText.price_range);
             console.log(responseText.price_range)
 
 
         } catch (error) {
-            console.error('Error fetching price range:', error);
+            toast.error('There was a problem with the Predict operation:', error.message);
         }
         finally {
             setLoading(false)

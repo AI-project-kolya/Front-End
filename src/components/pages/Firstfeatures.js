@@ -48,7 +48,7 @@ function Firstfeatures({ data, setData, setStep }) {
                     name='clock_speed'
                     onChange={(e) => {
                         setData({ ...data, clock_speed: e.target.value.trim() !== "" ? +e.target.value  : ""});
-                        console.log(e.target.value);
+
                     }}
                     id="clock_speed" placeholder='' min={0.5} max={3} />
                 <label htmlFor="clock_speed">Clock Speed</label>
@@ -59,7 +59,7 @@ function Firstfeatures({ data, setData, setStep }) {
                     name='int_memory'
                     onChange={(e) => {
                         setData({ ...data, int_memory:  e.target.value.trim() !== "" ? +e.target.value  : "" });
-                        console.log(e.target.value);
+
                     }}
                     className="form-control" id="int_memory" placeholder='' />
                 <label htmlFor="int_memory">Internal memory in GigaByte</label>
@@ -70,7 +70,7 @@ function Firstfeatures({ data, setData, setStep }) {
                     name='mobile_wt'
                     onChange={(e) => {
                         setData({ ...data, mobile_wt:  e.target.value.trim() !== "" ? +e.target.value  : "" });
-                        console.log(e.target.value);
+
                     }}
                     className="form-control" id="mobile_wt" placeholder='' min={80} max={200} />
                 <label htmlFor="mobile_wt">Device Weight</label>
@@ -81,7 +81,7 @@ function Firstfeatures({ data, setData, setStep }) {
                     name='n_cores'
                     onChange={(e) => {
                         setData({ ...data, n_cores: e.target.value.trim() !== "" ? +e.target.value  : ""});
-                        console.log(e.target.value);
+
                     }}
                     className="form-control" id="n_cores" placeholder='' />
                 <label htmlFor="n_cores">Number of processor cores</label>
@@ -92,7 +92,6 @@ function Firstfeatures({ data, setData, setStep }) {
                     name='pc'
                     onChange={(e) => {
                         setData({ ...data, pc:  e.target.value.trim() !== "" ? +e.target.value  : "" });
-                        console.log(e.target.value);
                     }}
                     className="form-control" id="pc" placeholder='' />
                 <label htmlFor="pc">Quality of primary camera in MegePixel</label>
