@@ -15,7 +15,7 @@ function Prediction({ prediction, setStep, setData ,setPrediction}) {
       <div className="card text-center p-2 pt-4">
         <img src={mobileImage} className="card-img-top " alt="..." style={{ maxWidth: "400px", margin: "auto" }} />
         <div className="card-body">
-          <h5 className="card-title">Prediction Succesful
+          <h5 className="card-title">Prediction Successful
             <img src={icon} style={{ width: '25px' }} />
           </h5>
           <p className="card-text">{prediction}</p>
