@@ -22,7 +22,7 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
             setPrediction(responseText.price_range);
         } catch (error) {
             toast.error(`${error.message}`);
-            console.log(error.message)
+            console.log(error,error.message)
         }
         finally {
             setLoading(false)
