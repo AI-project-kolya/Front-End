@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import "./Form.css"
-import Prediction from './Prediction';
 import { toast } from 'react-toastify';
 function Submit({ data, setData, setBack, setPrediction, prediction }) {
     const [loading, setLoading] = useState(0);
@@ -8,7 +7,6 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
         setLoading(true)
         try {
             e.preventDefault();
-            console.log("start fetching")
             const myHeaders = new Headers();
             myHeaders.append('Accept', 'application/json');
             myHeaders.append('Content-Type', 'application/json');
@@ -19,15 +17,12 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
             });
             const responseText = await response.json();
             if (!response.ok) {
-                throw new Error(responseText );
+                throw new Error(responseText);
             }
-            console.log('Price Range Prediction:', responseText);
             setPrediction(responseText.price_range);
-            console.log(responseText.price_range)
-
-
         } catch (error) {
-            toast.error('There was a problem with the Predict operation:', error.message);
+            toast.error(`${error.message}`);
+            console.log(error.message)
         }
         finally {
             setLoading(false)
@@ -44,7 +39,6 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
                     name='blue'
                     onChange={(e) => {
                         setData(data => {
-                            console.log(!data["blue"])
                             return { ...data, blue: !data["blue"] }
                         });
                     }}
@@ -57,7 +51,6 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
                     name='four_g'
                     onChange={(e) => {
                         setData(data => {
-                            console.log(!data["four_g"])
                             return { ...data, four_g: !data["four_g"] }
                         });
                     }}
@@ -71,7 +64,6 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
                     name='three_g'
                     onChange={(e) => {
                         setData(data => {
-                            console.log(!data["three_g"])
                             return { ...data, three_g: !data["three_g"] }
                         });
                     }}
@@ -84,7 +76,6 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
                     name='touch_screen'
                     onChange={(e) => {
                         setData(data => {
-                            console.log(!data["touch_screen"])
                             return { ...data, touch_screen: !data["touch_screen"] }
                         });
                     }}
@@ -97,7 +88,6 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
                     name='wifi'
                     onChange={(e) => {
                         setData(data => {
-                            console.log(!data["wifi"])
                             return { ...data, wifi: !data["wifi"] }
                         });
                     }}
@@ -110,7 +100,6 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
                     name='dual_sim'
                     onChange={(e) => {
                         setData(data => {
-                            console.log(!data["dual_sim"])
                             return { ...data, dual_sim: !data["dual_sim"] }
                         });
                     }}

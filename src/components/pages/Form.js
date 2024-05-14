@@ -4,29 +4,11 @@ import Firstfeatures from "./Firstfeatures";
 import SecondFeatures from "./SecondFeatures";
 import Submit from "./Submit";
 import Prediction from "./Prediction";
-
+import initDataState from '../data';
 function Form() {
   const [step, setStep] = useState(0);
   const [prediction, setPrediction] = useState('');
-  const [data, setData] = useState({
-    battery_power: "",
-    clock_speed: "",
-    int_memory: "",
-    mobile_wt: "",
-    n_cores: "",
-    pc: "",
-    px_height: "",
-    px_width: "",
-    ram: "",
-    sc_h: "",
-    sc_w: "",
-    blue: false,
-    four_g: false,
-    three_g: false,
-    touch_screen: false,
-    wifi: false,
-    dual_sim: false,
-  });
+  const [data, setData] = useState(initDataState);
   return (
     <form>
       <h2>Cell Phone Price</h2>
@@ -54,7 +36,7 @@ function Form() {
           setPrediction={setPrediction}
         />
       )}
-      {prediction.length>0 && <Prediction prediction={prediction} setStep={()=>setStep()}/>}
+      {prediction.length>0 && <Prediction prediction={prediction} setStep={setStep} setData={setData} setPrediction={setPrediction}/>}
     </form>
   );
 }
