@@ -42,7 +42,7 @@ function AboutUs() {
                                     Mobile
                                 </div>
                                 <h4 className="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
-                                <ul c="list-group">
+                                <ul className="list-group">
                                     <li className="list-group-item">Ibrahim Hosny</li>
                                     <li className="list-group-item">Mariam Nabil</li>
                                     <li className="list-group-item">Mahmoud Elsharqawy</li>
