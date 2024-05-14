@@ -1,12 +1,22 @@
 import React from 'react'
-
-function Prediction({ prediction }) {
+import mobileImage from "../../images/mobile.jpg"
+import icon from "../../images/icon.png"
+function Prediction({ prediction, setStep }) {
   return (
     <>
-      <div class="card text-center mb-3">
-        <div class="card-body">
-          <p class="card-text">{prediction}</p>
-          <a href="#" class="btn btn-primary">predict again</a>
+      <div className="card text-center p-2 pt-4">
+        <img src={mobileImage} className="card-img-top " alt="..." style={{ maxWidth: "400px", margin: "auto" }} />
+
+        <div className="card-body">
+          <h5 className="card-title">Prediction Succesful
+          <img src={icon} style={{width : '25px'}}/>
+
+          </h5>
+
+          <p className="card-text">{prediction}</p>
+        </div>
+        <div className="card-body">
+          <button onClick={() => setStep(0)} className="btn btn-primary">Predict Again</button>
         </div>
       </div>
     </>

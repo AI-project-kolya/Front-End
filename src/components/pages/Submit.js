@@ -48,7 +48,7 @@ function Submit({ data, setData, setBack, setPrediction, prediction }) {
                         });
                     }}
                     role="switch" id="blue" />
-                <label className="form-check-label" htmlFor="blue">blue</label>
+                <label className="form-check-label" htmlFor="blue">Bluetooth</label>
             </div>
             <div className="form-switch  mb-3">
                 <input className="form-check-input" type="checkbox"

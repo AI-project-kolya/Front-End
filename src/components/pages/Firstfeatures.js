@@ -4,11 +4,6 @@ import { toast } from 'react-toastify';
 import "./btns.css"
 function Firstfeatures({ data, setData, setStep }) {
     const handleClick = () => {
-        console.log(data['clock_speed'],
-            data['battery_power'], data["int_memory"],
-            data["mobile_wt"], data["n_cores"],
-            data["pc"]
-        )
         if (!data["clock_speed"] > 0 ||
             !data["battery_power"] > 0 ||
             !data["int_memory"] > 0 ||
@@ -30,18 +25,19 @@ function Firstfeatures({ data, setData, setStep }) {
         } else if (data["pc"] < 1 || data["pc"] > 20) {
             return toast.error('Quality of Primary Camera should be between 0 and 20')
         }
-
         setStep(1);
     }
 
     return (
         <>
             <div className="form-floating mb-3">
-                <input type="number" className="form-control"
+                <input type="number"
+                    className='form-control'
+                    min={0}
                     value={data["battery_power"]}
                     name='battery_power'
                     onChange={(e) => {
-                        setData({ ...data, battery_power: +e.target.value });
+                        setData({ ...data, battery_power: e.target.value.trim() !== "" ? +e.target.value  : "" });
                     }}
                     id="battery_power" placeholder='' />
                 <label htmlFor="battery_power">Battery Power</label>
@@ -51,18 +47,18 @@ function Firstfeatures({ data, setData, setStep }) {
                     value={data["clock_speed"]}
                     name='clock_speed'
                     onChange={(e) => {
-                        setData({ ...data, clock_speed: +e.target.value });
+                        setData({ ...data, clock_speed: e.target.value.trim() !== "" ? +e.target.value  : ""});
                         console.log(e.target.value);
                     }}
                     id="clock_speed" placeholder='' min={0.5} max={3} />
                 <label htmlFor="clock_speed">Clock Speed</label>
             </div>
             <div className="form-floating mb-3">
-                <input type="number"
+                <input type="number" min={0}
                     value={data["int_memory"]}
                     name='int_memory'
                     onChange={(e) => {
-                        setData({ ...data, int_memory: +e.target.value });
+                        setData({ ...data, int_memory:  e.target.value.trim() !== "" ? +e.target.value  : "" });
                         console.log(e.target.value);
                     }}
                     className="form-control" id="int_memory" placeholder='' />
@@ -73,29 +69,29 @@ function Firstfeatures({ data, setData, setStep }) {
                     value={data["mobile_wt"]}
                     name='mobile_wt'
                     onChange={(e) => {
-                        setData({ ...data, mobile_wt: +e.target.value });
+                        setData({ ...data, mobile_wt:  e.target.value.trim() !== "" ? +e.target.value  : "" });
                         console.log(e.target.value);
                     }}
                     className="form-control" id="mobile_wt" placeholder='' min={80} max={200} />
                 <label htmlFor="mobile_wt">Device Weight</label>
             </div>
             <div className="form-floating mb-3">
-                <input type="number"
+                <input type="number" min={0}
                     value={data["n_cores"]}
                     name='n_cores'
                     onChange={(e) => {
-                        setData({ ...data, n_cores: +e.target.value });
+                        setData({ ...data, n_cores: e.target.value.trim() !== "" ? +e.target.value  : ""});
                         console.log(e.target.value);
                     }}
                     className="form-control" id="n_cores" placeholder='' />
                 <label htmlFor="n_cores">Number of processor cores</label>
             </div>
             <div className="form-floating mb-3">
-                <input type="number"
+                <input type="number" min={0}
                     value={data["pc"]}
                     name='pc'
                     onChange={(e) => {
-                        setData({ ...data, pc: +e.target.value });
+                        setData({ ...data, pc:  e.target.value.trim() !== "" ? +e.target.value  : "" });
                         console.log(e.target.value);
                     }}
                     className="form-control" id="pc" placeholder='' />
@@ -104,11 +100,11 @@ function Firstfeatures({ data, setData, setStep }) {
 
             <button
                 onClick={handleClick}
-                className="btn btn-outline-primary"
+                className="btn btn-outline-primary next"
                 type="button"
             >
-                Next 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+                Next
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right next" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
                 </svg>
             </button>

@@ -27,7 +27,6 @@ function Form() {
     wifi: false,
     dual_sim: false,
   });
-  console.log(prediction);
   return (
     <form>
       <h2>Cell Phone Price</h2>
@@ -55,7 +54,7 @@ function Form() {
           setPrediction={setPrediction}
         />
       )}
-      {prediction.length>0 && <Prediction prediction={prediction} />}
+      {prediction.length>0 && <Prediction prediction={prediction} setStep={()=>setStep()}/>}
     </form>
   );
 }

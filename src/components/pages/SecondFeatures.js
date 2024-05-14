@@ -33,7 +33,7 @@ function SecondFeatures({ data, setData, setNext ,setBack }) {
                     value={data["px_height"]}
                     name='px_height'
                     onChange={(e) => {
-                        setData({ ...data, px_height: +e.target.value });
+                        setData({ ...data, px_height:  e.target.value.trim() !== "" ? +e.target.value  : "" });
                         console.log(e.target.value);
                     }}
                     id="px_height" placeholder='' min={0} max={1960} />
@@ -44,7 +44,7 @@ function SecondFeatures({ data, setData, setNext ,setBack }) {
                     value={data["px_width"]}
                     name='px_width'
                     onChange={(e) => {
-                        setData({ ...data, px_width: +e.target.value });
+                        setData({ ...data, px_width:  e.target.value.trim() !== "" ? +e.target.value  : "" });
                         console.log(e.target.value);
                     }}
                     id="px_width" placeholder='' min={500} max={2000} />
@@ -55,7 +55,7 @@ function SecondFeatures({ data, setData, setNext ,setBack }) {
                     value={data["ram"]}
                     name='ram'
                     onChange={(e) => {
-                        setData({ ...data, ram: +e.target.value });
+                        setData({ ...data, ram:  e.target.value.trim() !== "" ? +e.target.value  : "" });
                         console.log(e.target.value);
                     }}
                     id="ram" placeholder='' min={256} max={4000} />
@@ -66,7 +66,7 @@ function SecondFeatures({ data, setData, setNext ,setBack }) {
                     value={data["sc_h"]}
                     name='sc_h'
                     onChange={(e) => {
-                        setData({ ...data, sc_h: +e.target.value });
+                        setData({ ...data, sc_h:  e.target.value.trim() !== "" ? +e.target.value  : ""});
                         console.log(e.target.value);
                     }}
                     id="sc_h" placeholder='' min={5} max={20} />
@@ -77,7 +77,7 @@ function SecondFeatures({ data, setData, setNext ,setBack }) {
                     value={data["sc_w"]}
                     name='sc_w'
                     onChange={(e) => {
-                        setData({ ...data, sc_w: +e.target.value });
+                        setData({ ...data, sc_w:  e.target.value.trim() !== "" ? +e.target.value  : "" });
                         console.log(e.target.value);
                     }}
                     id="sc_w" placeholder='' min={0} max={19} />

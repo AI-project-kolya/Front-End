@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Form from './components/pages/Form';
 import Prediction from './components/pages/Prediction';
+import AboutUs from './components/pages/AboutUs';
 function App() {
   return (
     <BrowserRouter>
@@ -19,7 +20,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/predict' element={<Form />} />
-
+          <Route path='/aboutus' element={<AboutUs />}/>
         </Routes>
 
       </div>
