@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Form.css"
 import { toast } from 'react-toastify';
-function Submit({ data, setData, setBack, setPrediction, prediction }) {
+function Submit({ data, setData, setBack, setPrediction }) {
     const [loading, setLoading] = useState(0);
     const handleClick = async (e) => {
         setLoading(true)

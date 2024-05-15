@@ -22,7 +22,6 @@ function AboutUs() {
                                 </div>
                                 <ul className="list-group">
                                     <li className="list-group-item">Salma Reda Bedir</li>
-                                    <li className="list-group-item">Marwa Ashraf Saad</li>
                                 </ul>
                             </div>
                             <div className="col d-flex flex-column gap-2">
@@ -31,28 +30,16 @@ function AboutUs() {
                                 </div>
                                 <ul className="list-group">
                                     <li className="list-group-item">Doaa Ahmed Zaki</li>
-                                    <li className="list-group-item">Abdelrahman Raddad</li>
                                 </ul>
 
                             </div>
-                            <div className="col d-flex flex-column gap-2">
-                                <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                    Mobile
-                                </div>
-                                <ul className="list-group">
-                                    <li className="list-group-item">Ibrahim Hosny</li>
-                                    <li className="list-group-item">Mariam Nabil</li>
-                                    <li className="list-group-item">Mahmoud Elsharqawy</li>
-                                </ul>
-                            </div>
+                            
                             <div className="col d-flex flex-column gap-2">
                                 <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
                                     Artificial intelligence
                                 </div>
                                 <ul className="list-group">
                                     <li className="list-group-item">Somia Tarek</li>
-                                    <li className="list-group-item">Abdelrahman Arafat</li>
-                                    <li className="list-group-item">Salma Fawzy</li>
                                 </ul>
                             </div>
 
